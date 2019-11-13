@@ -1,4 +1,4 @@
-# zadanie3
+# Vue Film Database
 
 ## Project setup
 ```

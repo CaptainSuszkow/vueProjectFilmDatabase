@@ -5,6 +5,15 @@
     <MovieTable :movies='searchedMovies'/>
     <GenresView :movies='movieData'/>
     <CastView :movies='movieData'/>
+    <footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">©
+        <a>Made by Michał Suszek and Piotr Plichtowski</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
   </div>
 </template>
 

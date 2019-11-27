@@ -28,15 +28,7 @@
             </tbody>
         </table>
   </div>
-    <footer class="page-footer font-small blue">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">©
-        <a> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-
-</footer>
   </div>
 </template>
 
@@ -58,7 +50,7 @@ name: 'CastView',
         }
     },
     mounted(){
-        for(var movie of this.movies){
+        for(var movie of this.movies.slice(500,600)){
             for(var cast of movie.cast){
                 if(!_.contains(this.castList,cast)){
                     this.castList.push(cast)
@@ -69,7 +61,7 @@ name: 'CastView',
     methods: {
     changeSelectedCast( event) {
         this.selectedCast = event.target.options[event.target.options.selectedIndex].text
-        this.movieList = _.first(_.filter(this.movies, (movie)=>{
+        this.movieList = _.first(_.filter(this.movies.slice(500,600), (movie)=>{
             if(movie.cast.lenght != 0){
             if( movie.cast.indexOf(this.selectedCast) > -1)
                 return true 

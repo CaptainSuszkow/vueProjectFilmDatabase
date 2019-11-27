@@ -51,7 +51,7 @@ name: 'GenresView',
         }
     },
     mounted(){
-        for(var movie of this.movies){
+        for(var movie of this.movies.slice(500,600)){
             for(var genre of movie.genres){
                 if(!_.contains(this.genresList,genre)){
                     this.genresList.push(genre)
@@ -63,7 +63,7 @@ name: 'GenresView',
     changeSelectedGenre( event) {
         this.show = true
         this.selectedGenre = event.target.options[event.target.options.selectedIndex].text
-        this.movieList = _.first(_.filter(this.movies, (movie)=>{
+        this.movieList = _.first(_.filter(this.movies.slice(500,600), (movie)=>{
             if(movie.genres.join(' ').indexOf(this.selectedGenre) > -1)
             return true
             }),100)
